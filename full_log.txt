@@ -1,0 +1,319 @@
+test	Set up job	﻿2026-10-28T14:04:20.4735822Z Current runner version: '2.338.0'
+test	Set up job	2026-10-28T14:04:20.4799651Z ##[group]Runner Image Provisioner
+test	Set up job	2026-10-28T14:04:20.4801029Z Hosted Compute Agent
+test	Set up job	2026-10-28T14:04:20.4802562Z Version: 20261021.618
+test	Set up job	2026-10-28T14:04:20.4803679Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+test	Set up job	2026-10-28T14:04:20.4804897Z Build Date: 2026-10-21T00:45:21Z
+test	Set up job	2026-10-28T14:04:20.4806089Z Worker ID: {c2a45df0-c63d-45fb-975c-1a82a30df592}
+test	Set up job	2026-10-28T14:04:20.4807336Z Region: westus
+test	Set up job	2026-10-28T14:04:20.4808252Z Cloud: Azure
+test	Set up job	2026-10-28T14:04:20.4809060Z ##[endgroup]
+test	Set up job	2026-10-28T14:04:20.4811195Z ##[group]Operating System
+test	Set up job	2026-10-28T14:04:20.4812278Z Microsoft Windows Server 2025
+test	Set up job	2026-10-28T14:04:20.4813268Z 10.0.26100
+test	Set up job	2026-10-28T14:04:20.4814133Z Datacenter
+test	Set up job	2026-10-28T14:04:20.4814951Z ##[endgroup]
+test	Set up job	2026-10-28T14:04:20.4815797Z ##[group]Runner Image
+test	Set up job	2026-10-28T14:04:20.4816731Z Image: windows-2025-vs2026
+test	Set up job	2026-10-28T14:04:20.4818101Z Version: 20261021.278.1
+test	Set up job	2026-10-28T14:04:20.4820147Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+test	Set up job	2026-10-28T14:04:20.4823652Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+test	Set up job	2026-10-28T14:04:20.4825486Z ##[endgroup]
+test	Set up job	2026-10-28T14:04:20.4827569Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-10-28T14:04:20.4830603Z Contents: read
+test	Set up job	2026-10-28T14:04:20.4831563Z Metadata: read
+test	Set up job	2026-10-28T14:04:20.4832536Z Packages: read
+test	Set up job	2026-10-28T14:04:20.4833466Z ##[endgroup]
+test	Set up job	2026-10-28T14:04:20.4836815Z Secret source: Actions
+test	Set up job	2026-10-28T14:04:20.4838657Z Cache mode: write
+test	Set up job	2026-10-28T14:04:20.4840020Z Prepare workflow directory
+test	Set up job	2026-10-28T14:04:20.5383978Z Prepare all required actions
+test	Set up job	2026-10-28T14:04:20.5462590Z Getting action download info
+test	Set up job	2026-10-28T14:04:20.9484046Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test	Set up job	2026-10-28T14:04:21.1030534Z Download action repository 'actions/setup-dotnet@v4' (SHA:67a3573c9a986a3f9c594539f4ab511d57bb3ce9)
+test	Set up job	2026-10-28T14:04:21.7132099Z Complete job name: test
+test	Run actions/checkout@v4	﻿2026-10-28T14:04:21.8789235Z ##[group]Run actions/checkout@v4
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8790343Z with:
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8790804Z   repository: newmoviee123456-source/ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8794917Z   token: ***
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8795344Z   ssh-strict: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8795768Z   ssh-user: git
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8796181Z   persist-credentials: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8796655Z   clean: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8797070Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8797593Z   fetch-depth: 1
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8797992Z   fetch-tags: false
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8798412Z   show-progress: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8798916Z   lfs: false
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8799462Z   submodules: false
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8799918Z   set-safe-directory: true
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8800398Z   allow-unsafe-pr-checkout: false
+test	Run actions/checkout@v4	2026-10-28T14:04:21.8801178Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7434237Z Syncing repository: newmoviee123456-source/ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7437151Z ##[group]Getting Git version info
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7438557Z Working directory is 'D:\a\ads-poc\ads-poc'
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7440657Z [command]"C:\Program Files\Git\bin\git.exe" version
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7441809Z git version 2.56.0.windows.2
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7445655Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7451361Z Temporarily overriding HOME='D:\a\_temp\bb99b274-f4ce-45b1-9863-ea4133af0859' before making global git config changes
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7453792Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7455674Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ads-poc\ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7458969Z Deleting the contents of 'D:\a\ads-poc\ads-poc'
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7460585Z ##[group]Initializing the repository
+test	Run actions/checkout@v4	2026-10-28T14:04:22.7461925Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\ads-poc\ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:22.8029453Z Initialized empty Git repository in D:/a/ads-poc/ads-poc/.git/
+test	Run actions/checkout@v4	2026-10-28T14:04:22.8090804Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/newmoviee123456-source/ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9101163Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9103006Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9113630Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9537022Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9538908Z ##[group]Setting up auth
+test	Run actions/checkout@v4	2026-10-28T14:04:22.9555172Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v4	2026-10-28T14:04:23.0086387Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+test	Run actions/checkout@v4	2026-10-28T14:04:24.8083666Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v4	2026-10-28T14:04:24.8453255Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+test	Run actions/checkout@v4	2026-10-28T14:04:25.5817489Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Run actions/checkout@v4	2026-10-28T14:04:25.6243903Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+test	Run actions/checkout@v4	2026-10-28T14:04:26.3259661Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+test	Run actions/checkout@v4	2026-10-28T14:04:26.3714334Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:26.3715969Z ##[group]Fetching the repository
+test	Run actions/checkout@v4	2026-10-28T14:04:26.3730274Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2888fbff8227d614074e85df876f885710be3ede:refs/remotes/origin/master
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5663797Z From https://github.com/newmoviee123456-source/ads-poc
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5670658Z  * [new ref]         2888fbff8227d614074e85df876f885710be3ede -> origin/master
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5713348Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5714454Z ##[group]Determining the checkout info
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5716203Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:27.5733147Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+test	Run actions/checkout@v4	2026-10-28T14:04:27.6339507Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v4	2026-10-28T14:04:27.6869307Z ##[group]Checking out the ref
+test	Run actions/checkout@v4	2026-10-28T14:04:27.6870866Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B master refs/remotes/origin/master
+test	Run actions/checkout@v4	2026-10-28T14:04:27.7782948Z Reset branch 'master'
+test	Run actions/checkout@v4	2026-10-28T14:04:27.7806791Z branch 'master' set up to track 'origin/master'.
+test	Run actions/checkout@v4	2026-10-28T14:04:27.7860446Z ##[endgroup]
+test	Run actions/checkout@v4	2026-10-28T14:04:27.8382121Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+test	Run actions/checkout@v4	2026-10-28T14:04:27.8760418Z 2888fbff8227d614074e85df876f885710be3ede
+test	Run actions/setup-dotnet@v4	﻿2026-10-28T14:04:27.9259104Z ##[group]Run actions/setup-dotnet@v4
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:27.9259518Z with:
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:27.9259715Z   dotnet-version: 8.0.x
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:27.9259943Z   cache: false
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:27.9260133Z ##[endgroup]
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:28.2165183Z (node:5272) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:28.2214897Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:28.4327796Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\v4\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Runtime dotnet -Channel LTS
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:30.4849975Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-win-x64.zip size is 36971047 bytes.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:30.4854101Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:30.4877984Z dotnet-install: Extracting the archive.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:31.9467624Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:31.9473034Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:31.9483051Z dotnet-install: Installed version is 10.0.14
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:31.9489028Z dotnet-install: Installation finished
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:32.1635787Z [command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'D:\a\_actions\actions\setup-dotnet\v4\externals\install-dotnet.ps1' -SkipNonVersionedFiles -Channel 8.0
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:38.0869600Z dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.427/dotnet-sdk-8.0.427-win-x64.zip size is 285280040 bytes.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:38.0880248Z dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:04:38.0919920Z dotnet-install: Extracting the archive.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:05:01.6805269Z dotnet-install: Note that the script does not ensure your Windows version is supported during the installation.
+test	Run actions/setup-dotnet@v4	2026-10-28T14:05:01.6810406Z dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
+test	Run actions/setup-dotnet@v4	2026-10-28T14:05:01.6815864Z dotnet-install: Installed version is 8.0.427
+test	Run actions/setup-dotnet@v4	2026-10-28T14:05:01.6823274Z dotnet-install: Installation finished
+test	Run dotnet new console -o poc	﻿2026-10-28T14:05:01.7863750Z ##[group]Run dotnet new console -o poc
+test	Run dotnet new console -o poc	2026-10-28T14:05:01.7864211Z [36;1mdotnet new console -o poc[0m
+test	Run dotnet new console -o poc	2026-10-28T14:05:01.8455198Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+test	Run dotnet new console -o poc	2026-10-28T14:05:01.8456437Z env:
+test	Run dotnet new console -o poc	2026-10-28T14:05:01.8456740Z   DOTNET_ROOT: C:\Program Files\dotnet
+test	Run dotnet new console -o poc	2026-10-28T14:05:01.8457093Z ##[endgroup]
+test	Run dotnet new console -o poc	2026-10-28T14:05:08.9720660Z The template "Console App" was created successfully.
+test	Run dotnet new console -o poc	2026-10-28T14:05:09.9877125Z 
+test	Run dotnet new console -o poc	2026-10-28T14:05:09.9877646Z Processing post-creation actions...
+test	Run dotnet new console -o poc	2026-10-28T14:05:09.9885462Z Restoring D:\a\ads-poc\ads-poc\poc\poc.csproj:
+test	Run dotnet new console -o poc	2026-10-28T14:05:12.5269240Z   Determining projects to restore...
+test	Run dotnet new console -o poc	2026-10-28T14:05:12.9887225Z   Restored D:\a\ads-poc\ads-poc\poc\poc.csproj (in 129 ms).
+test	Run dotnet new console -o poc	2026-10-28T14:05:13.0092606Z Restore succeeded.
+test	Run dotnet new console -o poc	2026-10-28T14:05:13.0093303Z 
+test	Run dotnet new console -o poc	2026-10-28T14:05:13.0108335Z 
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	﻿2026-10-28T14:05:13.4601198Z ##[group]Run dotnet add poc package Azure.Storage.DataMovement.Blobs
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:13.4601845Z [36;1mdotnet add poc package Azure.Storage.DataMovement.Blobs[0m
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:13.4678368Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:13.4678766Z env:
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:13.4678976Z   DOTNET_ROOT: C:\Program Files\dotnet
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:13.4679261Z ##[endgroup]
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:15.8881956Z info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:15.8889496Z info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:15.8918028Z info : Adding PackageReference for package 'Azure.Storage.DataMovement.Blobs' into project 'D:\a\ads-poc\ads-poc\poc\poc.csproj'.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.3777555Z info :   GET https://api.nuget.org/v3/registration5-gz-semver2/azure.storage.datamovement.blobs/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.4590060Z info :   OK https://api.nuget.org/v3/registration5-gz-semver2/azure.storage.datamovement.blobs/index.json 81ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.6859921Z info : Restoring packages for D:\a\ads-poc\ads-poc\poc\poc.csproj...
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.7916123Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement.blobs/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.8695871Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement.blobs/index.json 77ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9105246Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement.blobs/12.3.0/azure.storage.datamovement.blobs.12.3.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9157825Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement.blobs/12.3.0/azure.storage.datamovement.blobs.12.3.0.nupkg 7ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9583304Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9595018Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9627046Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9707338Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/index.json 10ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:16.9720053Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/12.26.0/azure.storage.blobs.12.26.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0002667Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/index.json 12ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0014022Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/1.49.0/azure.core.1.49.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0027676Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/12.26.0/azure.storage.blobs.12.26.0.nupkg 5ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0039867Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/1.49.0/azure.core.1.49.0.nupkg 5ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0472241Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement/index.json 88ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0492347Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement/12.3.0/azure.storage.datamovement.12.3.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0547930Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.datamovement/12.3.0/azure.storage.datamovement.12.3.0.nupkg 4ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0668947Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/1.47.3/azure.core.1.47.3.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0704733Z info :   GET https://api.nuget.org/v3-flatcontainer/system.memory.data/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0774087Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.common/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0838189Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/1.47.3/azure.core.1.47.3.nupkg 3ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.0969731Z info :   OK https://api.nuget.org/v3-flatcontainer/system.memory.data/index.json 4ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1011183Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.bcl.asyncinterfaces/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1018947Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.common/index.json 4ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1044480Z info :   GET https://api.nuget.org/v3-flatcontainer/system.clientmodel/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1073362Z info :   GET https://api.nuget.org/v3-flatcontainer/azure.storage.common/12.25.0/azure.storage.common.12.25.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1075312Z info :   OK https://api.nuget.org/v3-flatcontainer/system.clientmodel/index.json 5ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1076511Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.bcl.asyncinterfaces/index.json 8ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1078618Z info :   GET https://api.nuget.org/v3-flatcontainer/system.clientmodel/1.7.0/system.clientmodel.1.7.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1080400Z info :   GET https://api.nuget.org/v3-flatcontainer/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1082663Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1100792Z info :   OK https://api.nuget.org/v3-flatcontainer/azure.storage.common/12.25.0/azure.storage.common.12.25.0.nupkg 11ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1115569Z info :   OK https://api.nuget.org/v3-flatcontainer/system.clientmodel/1.7.0/system.clientmodel.1.7.0.nupkg 6ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1148256Z info :   OK https://api.nuget.org/v3-flatcontainer/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg 3ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1172723Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg 7ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1200127Z info :   GET https://api.nuget.org/v3-flatcontainer/system.io.hashing/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1201381Z info :   OK https://api.nuget.org/v3-flatcontainer/system.io.hashing/index.json 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1203081Z info :   GET https://api.nuget.org/v3-flatcontainer/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1204903Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1206803Z info :   OK https://api.nuget.org/v3-flatcontainer/system.io.hashing/8.0.0/system.io.hashing.8.0.0.nupkg 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1208694Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1211029Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1213805Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg 3ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1217077Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1225157Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/index.json 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1257670Z info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.1290070Z info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.8716703Z info : Installed Azure.Storage.DataMovement 12.3.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.storage.datamovement\12.3.0 with content hash t74+0SUu0sU5HJ7rtjK3bTdp35m/bThnpyZCkIsPQ9lzsv0hVwKGgcq2hXoeKcsBp9szFNldL2EH7Z0awBAspQ==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.8929981Z info : Installed Azure.Storage.DataMovement.Blobs 12.3.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.storage.datamovement.blobs\12.3.0 with content hash wSFRxsVWUKEJHvBj5s1gY9v5qF/d6qroHZVbNvdDbv9Gv2waX97UmmmmIrOwAI9XvwWva95x7B35nf8ZDomdwQ==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:17.9783836Z info : Installed System.ClientModel 1.7.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\system.clientmodel\1.7.0 with content hash NKKA3/O6B7PxmtIzOifExHdfoWthy3AD4EZ1JfzcZU8yGZTbYrK1qvXsHUL/1yQKKqWSKgIR1Ih/yf2gOaHc4w==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.0824741Z info : Installed System.Memory.Data 8.0.1 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\system.memory.data\8.0.1 with content hash BVYuec3jV23EMRDeR7Dr1/qhx7369dZzJ9IWy2xylvb4YfXsrUxspWc4UWYid/tj4zZK58uGZqn2WQiaDMhmAg==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.1432889Z info : Installed Azure.Storage.Common 12.25.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.storage.common\12.25.0 with content hash MHGWp4aLHRo0BdLj25U2qYdYK//Zz21k4bs3SVyNQEmJbBl3qZ8GuOmTSXJ+Zad93HnFXfvD8kyMr0gjA8Ftpw==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.2785557Z info : Installed Microsoft.Bcl.AsyncInterfaces 8.0.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\microsoft.bcl.asyncinterfaces\8.0.0 with content hash 3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.3523519Z info : Installed Microsoft.Extensions.DependencyInjection.Abstractions 8.0.2 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.2 with content hash 3iE7UF7MQkCv1cxzCahz+Y/guQbTqieyxyaWKhrRO91itI9cOKO76OHeQDahqG4MmW5umr3CcCvGmK92lWNlbg==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.3822930Z info : Installed Azure.Storage.Blobs 12.26.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.storage.blobs\12.26.0 with content hash EBRSHmI0eNzdufcIS1Rf7Ez9M8V1Jl7pMV4UWDERDMCv513KtAVsgz2ez2FQP9Qnwg7uEQrP+Uc7vBtumlr7sQ==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.5869330Z info : Installed System.IO.Hashing 8.0.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\system.io.hashing\8.0.0 with content hash ne1843evDugl0md7Fjzy6QjJrzsjh46ZKbhf8GwBXb5f/gw97J4bxMs0NQKifDuThh/f0bZ0e62NPl1jzTuRqA==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.7824697Z info : Installed Azure.Core 1.49.0 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.core\1.49.0 with content hash wmY5VEEVTBJN+8KVB6qSVZYDCMpHs1UXooOijx/NH7OsMtK92NlxhPBpPyh4cR+07R/zyDGvA5+Fss4TpwlO+g==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.9295927Z info : Installed Azure.Core 1.47.3 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\azure.core\1.47.3 with content hash u/uCNtUWT+Q/Is7/PAMy3KP9kq5vY5klRnyAvRxO/kEa5OnV3/X5lHlCajNANC7vmej6jAqceqLBJNO/VyCKzg==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.9494775Z info : Installed Microsoft.Extensions.Logging.Abstractions 8.0.3 from https://api.nuget.org/v3/index.json to C:\Users\runneradmin\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.3 with content hash dL0QGToTxggRLMYY4ZYX5AMwBb+byQBd/5dMiZE07Nv73o6I5Are3C7eQTh7K2+A4ct0PVISSr7TZANbiNb2yQ==.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.9687680Z info :   GET https://api.nuget.org/v3/vulnerabilities/index.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:18.9747648Z info :   OK https://api.nuget.org/v3/vulnerabilities/index.json 5ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.0794306Z info :   GET https://api.nuget.org/v3-vulnerabilities/2026.10.28.05.41.06/vulnerability.base.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.0809684Z info :   GET https://api.nuget.org/v3-vulnerabilities/2026.10.28.05.41.06/2026.10.28.05.41.06/vulnerability.update.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.0828496Z info :   OK https://api.nuget.org/v3-vulnerabilities/2026.10.28.05.41.06/vulnerability.base.json 3ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.0881780Z info :   OK https://api.nuget.org/v3-vulnerabilities/2026.10.28.05.41.06/2026.10.28.05.41.06/vulnerability.update.json 2ms
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.2880441Z info : Package 'Azure.Storage.DataMovement.Blobs' is compatible with all the specified frameworks in project 'D:\a\ads-poc\ads-poc\poc\poc.csproj'.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.8962922Z info : PackageReference for package 'Azure.Storage.DataMovement.Blobs' version '12.3.0' added to file 'D:\a\ads-poc\ads-poc\poc\poc.csproj'.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.8991476Z info : Generating MSBuild file D:\a\ads-poc\ads-poc\poc\obj\poc.csproj.nuget.g.targets.
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.9019623Z info : Writing assets file to disk. Path: D:\a\ads-poc\ads-poc\poc\obj\project.assets.json
+test	Run dotnet add poc package Azure.Storage.DataMovement.Blobs	2026-10-28T14:05:19.9187722Z log  : Restored D:\a\ads-poc\ads-poc\poc\poc.csproj (in 2.65 sec).
+test	Write test program	﻿2026-10-28T14:05:20.1044654Z ##[group]Run Set-Content -Path poc/Program.cs -Value @'
+test	Write test program	2026-10-28T14:05:20.1045200Z [36;1mSet-Content -Path poc/Program.cs -Value @'[0m
+test	Write test program	2026-10-28T14:05:20.1045530Z [36;1musing Azure;[0m
+test	Write test program	2026-10-28T14:05:20.1045759Z [36;1musing Azure.Storage.Blobs;[0m
+test	Write test program	2026-10-28T14:05:20.1046053Z [36;1musing Azure.Storage.DataMovement.Blobs;[0m
+test	Write test program	2026-10-28T14:05:20.1046332Z [36;1m[0m
+test	Write test program	2026-10-28T14:05:20.1046723Z [36;1mvar connStr = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");[0m
+test	Write test program	2026-10-28T14:05:20.1047316Z [36;1mvar container = new BlobContainerClient(connStr, "test-container");[0m
+test	Write test program	2026-10-28T14:05:20.1047837Z [36;1mvar dest = Path.Combine(Path.GetTempPath(), "ads-poc-" + Guid.NewGuid());[0m
+test	Write test program	2026-10-28T14:05:20.1048257Z [36;1mDirectory.CreateDirectory(dest);[0m
+test	Write test program	2026-10-28T14:05:20.1048514Z [36;1m[0m
+test	Write test program	2026-10-28T14:05:20.1048881Z [36;1mvar transfer = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest);[0m
+test	Write test program	2026-10-28T14:05:20.1049668Z [36;1mConsole.WriteLine($"TRANSFER_STATUS={transfer.Status}");[0m
+test	Write test program	2026-10-28T14:05:20.1050037Z [36;1m[0m
+test	Write test program	2026-10-28T14:05:20.1050240Z [36;1mConsole.WriteLine($"DEST_DIR={dest}");[0m
+test	Write test program	2026-10-28T14:05:20.1050638Z [36;1mConsole.WriteLine("--- Directory.GetFiles (visible files) ---");[0m
+test	Write test program	2026-10-28T14:05:20.1051113Z [36;1mforeach (var f in Directory.GetFiles(dest)) Console.WriteLine(f);[0m
+test	Write test program	2026-10-28T14:05:20.1051459Z [36;1m'@[0m
+test	Write test program	2026-10-28T14:05:20.1125752Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+test	Write test program	2026-10-28T14:05:20.1126118Z env:
+test	Write test program	2026-10-28T14:05:20.1126331Z   DOTNET_ROOT: C:\Program Files\dotnet
+test	Write test program	2026-10-28T14:05:20.1126592Z ##[endgroup]
+test	Run download	﻿2026-10-28T14:05:20.6693403Z ##[group]Run dotnet run --project poc | Tee-Object -FilePath run_output.txt
+test	Run download	2026-10-28T14:05:20.6694272Z [36;1mdotnet run --project poc | Tee-Object -FilePath run_output.txt[0m
+test	Run download	2026-10-28T14:05:20.6694769Z [36;1m$destLine = Get-Content run_output.txt | Select-String "DEST_DIR="[0m
+test	Run download	2026-10-28T14:05:20.6695202Z [36;1m$dest = $destLine -replace "DEST_DIR=",""[0m
+test	Run download	2026-10-28T14:05:20.6695512Z [36;1mecho "DEST_DIR=$dest" >> $env:GITHUB_ENV[0m
+test	Run download	2026-10-28T14:05:20.6769107Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+test	Run download	2026-10-28T14:05:20.6769464Z env:
+test	Run download	2026-10-28T14:05:20.6769701Z   DOTNET_ROOT: C:\Program Files\dotnet
+test	Run download	2026-10-28T14:05:20.6771917Z   AZURE_STORAGE_CONNECTION_STRING: ***
+test	Run download	2026-10-28T14:05:20.6772188Z ##[endgroup]
+test	Run download	2026-10-28T14:05:35.8984069Z TRANSFER_STATUS=Azure.Storage.DataMovement.TransferStatus
+test	Run download	2026-10-28T14:05:35.8988541Z DEST_DIR=C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb
+test	Run download	2026-10-28T14:05:35.8990468Z --- Directory.GetFiles (visible files) ---
+test	Run download	2026-10-28T14:05:35.8991984Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\existingfile.txt
+test	Run download	2026-10-28T14:05:35.8993512Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\probe
+test	Run download	2026-10-28T14:05:35.8994968Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\probe.txt
+test	Enumerate alternate data streams	﻿2026-10-28T14:05:36.3114640Z ##[group]Run Write-Host "=== Files in $env:DEST_DIR ==="
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3115180Z [36;1mWrite-Host "=== Files in $env:DEST_DIR ==="[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3115614Z [36;1mGet-ChildItem $env:DEST_DIR -Force | Format-List Name, Length[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3116027Z [36;1mWrite-Host "=== Alternate Data Streams ==="[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3116406Z [36;1mGet-ChildItem $env:DEST_DIR -Force | ForEach-Object {[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3116872Z [36;1m  Get-Item -Path $_.FullName -Stream * -ErrorAction SilentlyContinue |[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3117317Z [36;1m    Format-Table FileName, Stream, Length -AutoSize[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3117622Z [36;1m}[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3194368Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3194753Z env:
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3194981Z   DOTNET_ROOT: C:\Program Files\dotnet
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3195439Z   DEST_DIR: C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb
+test	Enumerate alternate data streams	2026-10-28T14:05:36.3195968Z ##[endgroup]
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8164389Z === Files in C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb ===
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8523315Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8621691Z [32;1mName   : [0mexistingfile.txt
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8622746Z [32;1mLength : [0m14
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8622994Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8627616Z [32;1mName   : [0mprobe
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8628437Z [32;1mLength : [0m11
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8628718Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8631168Z [32;1mName   : [0mprobe.txt
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8632185Z [32;1mLength : [0m0
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8632474Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8643154Z === Alternate Data Streams ===
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8832248Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8847956Z [32;1mFileName                                                                                             [0m[32;1m Stream         [0m[32;1m L[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8849964Z [32;1m                                                                                                     [0m[32;1m                [0m[32;1m e[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8851775Z [32;1m                                                                                                     [0m[32;1m                [0m[32;1m n[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8853520Z [32;1m                                                                                                     [0m[32;1m                [0m[32;1m g[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8855119Z [32;1m                                                                                                     [0m[32;1m                [0m[32;1m t[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8856242Z [32;1m                                                                                                     [0m[32;1m                [0m[32;1m h[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8866636Z [32;1m--------                                                                                             [0m [32;1m------         [0m [32;1m-[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8867985Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\existingfile.txt :$DATA          4
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8869865Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\existingfile.txt Zone.Identifier 1
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8870669Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8875281Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8877845Z [32;1mFileName                                                                                  [0m[32;1m Stream[0m[32;1m Length[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8879827Z [32;1m--------                                                                                  [0m [32;1m------[0m [32;1m------[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8882113Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\probe :$DATA     11
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8894506Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8896703Z 
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8903591Z [32;1mFileName                                                                                      [0m[32;1m Stream        [0m[32;1m Length[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8908824Z [32;1m--------                                                                                      [0m [32;1m------        [0m [32;1m------[0m
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8910089Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\probe.txt :$DATA              0
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8911702Z C:\Users\runneradmin\AppData\Local\Temp\ads-poc-6c567f26-4f37-4dab-9afe-fb34d5c86deb\probe.txt simple-ads.bin     11
+test	Enumerate alternate data streams	2026-10-28T14:05:36.8912592Z 
+test	Post Run actions/setup-dotnet@v4	﻿2026-10-28T14:05:36.9668057Z Post job cleanup.
+test	Post Run actions/setup-dotnet@v4	2026-10-28T14:05:37.1581853Z (node:3060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Post Run actions/setup-dotnet@v4	2026-10-28T14:05:37.1583194Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Post Run actions/checkout@v4	﻿2026-10-28T14:05:37.1858109Z Post job cleanup.
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1619567Z [command]"C:\Program Files\Git\bin\git.exe" version
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1620214Z git version 2.56.0.windows.2
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1626292Z Temporarily overriding HOME='D:\a\_temp\10d2cf0e-8865-4103-9a2e-a0804180c0d0' before making global git config changes
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1627665Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1629419Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\ads-poc\ads-poc
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1631548Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v4	2026-10-28T14:05:38.1634405Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+test	Post Run actions/checkout@v4	2026-10-28T14:05:39.2062319Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v4	2026-10-28T14:05:39.2063879Z http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-10-28T14:05:39.2065305Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-10-28T14:05:39.2068087Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+test	Post Run actions/checkout@v4	2026-10-28T14:05:40.2142412Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Run actions/checkout@v4	2026-10-28T14:05:40.2163886Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+test	Complete job	﻿2026-10-28T14:05:40.2260438Z Cleaning up orphan processes
+test	Complete job	2026-10-28T14:05:40.2767194Z Terminate orphan process: pid (2892) (VBCSCompiler)
+test	Complete job	2026-10-28T14:05:40.2883626Z Terminate orphan process: pid (2836) (conhost)
+test	Complete job	2026-10-28T14:05:40.3098274Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-dotnet@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
