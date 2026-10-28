@@ -14,8 +14,8 @@ jobs:
         shell: pwsh
         run: |
           Set-Content -Path poc/Program.cs -Value @'
+          using Azure;
           using Azure.Storage.Blobs;
-          using Azure.Storage.DataMovement;
           using Azure.Storage.DataMovement.Blobs;
 
           var connStr = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
@@ -23,11 +23,8 @@ jobs:
           var dest = Path.Combine(Path.GetTempPath(), "ads-poc-" + Guid.NewGuid());
           Directory.CreateDirectory(dest);
 
-          var tm = new TransferManager();
-          var transfer = await tm.StartTransferAsync(
-              new BlobStorageResourceContainer(container),
-              new LocalDirectoryStorageResource(dest));
-          await transfer.WaitForCompletionAsync();
+          var transfer = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest);
+          Console.WriteLine($"TRANSFER_STATUS={transfer.Status}");
 
           Console.WriteLine($"DEST_DIR={dest}");
           Console.WriteLine("--- Directory.GetFiles (visible files) ---");
