@@ -1,0 +1,55 @@
+name: ADS PoC
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet new console -o poc
+      - run: dotnet add poc package Azure.Storage.DataMovement.Blobs
+      - name: Write test program
+        shell: pwsh
+        run: |
+          Set-Content -Path poc/Program.cs -Value @'
+          using Azure.Storage.Blobs;
+          using Azure.Storage.DataMovement;
+          using Azure.Storage.DataMovement.Blobs;
+
+          var connStr = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
+          var container = new BlobContainerClient(connStr, "test-container");
+          var dest = Path.Combine(Path.GetTempPath(), "ads-poc-" + Guid.NewGuid());
+          Directory.CreateDirectory(dest);
+
+          var tm = new TransferManager();
+          var transfer = await tm.StartTransferAsync(
+              new BlobStorageResourceContainer(container),
+              new LocalDirectoryStorageResource(dest));
+          await transfer.WaitForCompletionAsync();
+
+          Console.WriteLine($"DEST_DIR={dest}");
+          Console.WriteLine("--- Directory.GetFiles (visible files) ---");
+          foreach (var f in Directory.GetFiles(dest)) Console.WriteLine(f);
+          '@
+      - name: Run download
+        id: run
+        shell: pwsh
+        run: |
+          dotnet run --project poc | Tee-Object -FilePath run_output.txt
+          $destLine = Get-Content run_output.txt | Select-String "DEST_DIR="
+          $dest = $destLine -replace "DEST_DIR=",""
+          echo "DEST_DIR=$dest" >> $env:GITHUB_ENV
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+      - name: Enumerate alternate data streams
+        shell: pwsh
+        run: |
+          Write-Host "=== Files in $env:DEST_DIR ==="
+          Get-ChildItem $env:DEST_DIR -Force | Format-List Name, Length
+          Write-Host "=== Alternate Data Streams ==="
+          Get-ChildItem $env:DEST_DIR -Force | ForEach-Object {
+            Get-Item -Path $_.FullName -Stream * -ErrorAction SilentlyContinue |
+              Format-Table FileName, Stream, Length -AutoSize
+          }
